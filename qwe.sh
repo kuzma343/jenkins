@@ -1,2 +1,1 @@
-def install = "1"
-echo "helo world"
+sh 'sudo apt-get install -y mc'
