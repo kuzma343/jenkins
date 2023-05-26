@@ -1,8 +1,10 @@
 node {
     stage('Install Midnight Commander') {
-        sh '''
-        echo <password> | sudo -S apt-get install -y mc
-        '''
+        withCredentials([string(credentialsId: 'sudo-password', variable: 'PASSWORD')]) {
+            sh '''
+            echo $PASSWORD | sudo -S apt-get install -y mc
+            '''
+        }
     }
 }
 
