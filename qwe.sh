@@ -1,1 +1,1 @@
-apy install mc
+echo "helo world"
